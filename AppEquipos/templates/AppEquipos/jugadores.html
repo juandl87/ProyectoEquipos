@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends "AppEquipos/padre.html" %}
+
+{% load static %}
+
+
+    {% block contenido_que_cambia %}
+
+        <!-- aca va lo que se modifica-->
+        <body>
+            <h1>Jugadores</h1>
+
+            <form action="" method="POST"> {% csrf_token %}
+
+                <table>
+    
+                    {{ formulario_jugadores.as_table }}
+    
+                </table>
+                    <input type="submit", value="Enviar">
+    
+    
+            </form>
+        </body>    
+
+    {% endblock %}
+
+
+</html>
